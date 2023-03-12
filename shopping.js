@@ -8,4 +8,11 @@ const addProduct = () =>{
     quantityField.value = "";
 
     console.log(product, quantity);
+    displayProduct(product, quantity);
+}
+
+const displayProduct = (product, quantity) => {
+    const li = document.createElement("li");
+    li.innerText = `${product} : ${quantity}`;
+    document.getElementById("product-container").appendChild(li);
 }
